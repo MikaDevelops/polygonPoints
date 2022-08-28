@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PolygoniTest {
+public class TestPolygon {
 	Polygon testiPolygoni;
 
 	@Before
