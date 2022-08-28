@@ -8,11 +8,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class PolygoniTest {
-	Polygoni testiPolygoni;
+	Polygon testiPolygoni;
 
 	@Before
 	public void initialize() {
-		testiPolygoni = new Polygoni();
+		testiPolygoni = new Polygon();
 	}
 
 	@Test

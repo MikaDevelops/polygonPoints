@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Polygon;
+
 import javafx.stage.Stage;
 
 public class App extends Application {
@@ -18,21 +18,21 @@ public class App extends Application {
 		Pane ruutu = new Pane();
 		Label infoTeksti = new Label();
 		
-		Polygoni polygoni = new Polygoni();
+		Polygon polygoni = new Polygon();
 		try {
 			polygoni.lataaPolygoninKulmakoordinaatit();
 			ArrayList<Double> kulmaKoordinaatit = polygoni.haeKoordinaatit();
 			if (kulmaKoordinaatit.size() < 3) {
 				infoTeksti.setText("janoja alle kolme -> ei polygoni");
 			} else {
-				Polygon polygoniPiirros = luoPolygonPiirros(kulmaKoordinaatit);
+				javafx.scene.shape.Polygon polygoniPiirros = luoPolygonPiirros(kulmaKoordinaatit);
 				ruutu.getChildren().add(polygoniPiirros);
 			}
 		} catch (FileNotFoundException e) {
 			infoTeksti.setText("Tiedostoa polygon.txt ei löytynyt");
 		}
 
-		Pisteet pisteet = new Pisteet();
+		Point pisteet = new Point();
 		try {
 			pisteet.lataaPisteet();
 		} catch (FileNotFoundException e) {
@@ -57,8 +57,8 @@ public class App extends Application {
 	 * 
 	 * @param kulmapisteet
 	 */
-	private static Polygon luoPolygonPiirros(ArrayList<Double> kulmapisteet) {
-		Polygon monikulmaPiirros = new Polygon();
+	private static javafx.scene.shape.Polygon luoPolygonPiirros(ArrayList<Double> kulmapisteet) {
+		javafx.scene.shape.Polygon monikulmaPiirros = new javafx.scene.shape.Polygon();
 		monikulmaPiirros.setFill(Color.LIGHTGRAY);
 		monikulmaPiirros.setStroke(Color.BLACK);
 		monikulmaPiirros.setStrokeWidth(1);

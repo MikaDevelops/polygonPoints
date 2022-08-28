@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**
  * Polygoni luokka käsittelee kuvion kulmapisteitä.
  */
-public class Polygoni {
+public class Polygon {
 
 	private List<Double> kulmakoordinaatit = new ArrayList<>();
 

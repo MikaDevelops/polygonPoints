@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Pisteet {
+public class Point {
 
 	private List<Double> pisteet = new ArrayList<>();
 
