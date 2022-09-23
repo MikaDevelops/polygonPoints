@@ -55,7 +55,7 @@ public class App extends Application {
 	/**
 	 * luoPolygonPiirros luo piirroksen pisteiden mukaan ikkunaan.
 	 * 
-	 * @param kulmapisteet
+	 * @param kulmapisteet ArrayList<Double>
 	 */
 	private static javafx.scene.shape.Polygon luoPolygonPiirros(ArrayList<Double> kulmapisteet) {
 		javafx.scene.shape.Polygon monikulmaPiirros = new javafx.scene.shape.Polygon();
